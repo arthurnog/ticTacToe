@@ -1,5 +1,6 @@
 import { View, Text } from 'dripsy'
 import { createParam } from 'solito'
+import React from 'react'
 import { TextLink } from 'solito/link'
 
 const { useParam } = createParam<{ id: string }>()

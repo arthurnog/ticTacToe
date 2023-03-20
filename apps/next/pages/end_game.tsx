@@ -1,0 +1,1 @@
+export { EndGameScreen as default } from 'app/features/end_game/screen'

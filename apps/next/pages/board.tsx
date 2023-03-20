@@ -1,0 +1,1 @@
+export { BoardScreen as default } from 'app/features/board/screen'
