@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import styles from './style';
 
@@ -40,7 +39,7 @@ export default function Board() {
         winner: null,
     });
 
-    function handleClick(index: number) {
+    const handleClick = useCallback((index: number) => {
 
         setGameState((previousState) => {
             if (previousState.winner != null) {
@@ -61,8 +60,7 @@ export default function Board() {
                 winner: calculateWinner(newBoardState),
             }
         });
-
-    }
+    }, []);
 
     let [messenge, setMessenge] = useState("X Turn");
 
